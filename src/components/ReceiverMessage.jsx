@@ -26,7 +26,7 @@ function ReceiverMessage({ lastMessage, message }) {
                         style={{ marginLeft: isFirstMessageByUser ? '4px' : '48px' }}
                     />
                 ) : (
-                    <div className="message" style={{ float: 'left', marginLeft: isFirstMessageByUser ? '4px' : '48px',  backgroundColor: '#CABCDC' }}>
+                    <div className="message receiver-msg" >
                         {message.text}
                     </div>
                 )

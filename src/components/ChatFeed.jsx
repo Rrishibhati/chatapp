@@ -29,8 +29,8 @@ const ChatFeed = (props) => {
         return keys.map((key, index) => {
             const message = messages[key];
             const lastMessageKey = index === 0 ? null : keys[index-1];
-            const isMyMessage = userName === message.sender.userName;
-
+            const isMyMessage = userName === message.sender.username;
+            
             return (
                 <div key={`msg-${index}`} style={{ width : '100%'}} >
                     <div className="message-block">
@@ -46,6 +46,7 @@ const ChatFeed = (props) => {
                                 {renderReadReceipt(message, isMyMessage)}
                         </div>
                     </div>
+                    <br /><br />
                 </div>
             )
         });

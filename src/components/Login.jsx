@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, {useState} from 'react';
+import { LoginOutlined } from '@ant-design/icons';
 
 const projectID = '24339a4b-4e16-4fe3-863b-e034b6f937b7';
 
@@ -28,16 +29,22 @@ function Login() {
 
     return (
         <div className="login">
-            <h2>Login</h2>
-            <div className='form-field'>
-                <input type="text" className="input" name="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-            </div>
+            <div className="login-body">
+                <h1 className="login-heading">Chat Application</h1>
+                <div className="form-field">
+                    <label>Username</label>
+                    <input type="text" className="input" name="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                </div>
 
-            <div className='form-field'>
-                <input type="password" className="input" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            </div>
+                <div className="form-field">
+                    <label>Password</label>
+                    <input type="password" className="input" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                </div>
 
-            <button onClick={handleLogin} className="login-btn" >Login</button>
+                <div className="form-field">
+                    <button onClick={handleLogin} className="login-btn" >Login <LoginOutlined /></button>
+                </div>
+            </div>
         </div>
     )
 }

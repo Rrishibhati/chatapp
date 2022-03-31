@@ -29,11 +29,9 @@ function MessageForm(props) {
   return (
     <form onSubmit={handleSubmit} className="message-form">
       <input type="text" className="message-input" value={value} onChange={handleChange} placeholder="Send a message..." />
-      <label htmlFor='upload-btn' onClick={handleUpload}>
-        <span className='image-button'>
+      <button className='upload-btn' onClick={handleUpload}>
           <PictureOutlined className='picture-icon' />
-        </span>
-      </label>
+      </button>
 
       <input type="file" multiple={false} id="upload-button" style={{ display: 'none' }} onChange={handleUpload.bind(this)} />
 
